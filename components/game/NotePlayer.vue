@@ -27,7 +27,7 @@ export default {
   mounted() {
     setTimeout(() => {
       this.playSound(this.notes)
-    }, 2000)
+    }, 1500)
   },
   methods: {
     playSound(notes) {
@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .play {
-  margin: 32px auto;
+  margin: 0 auto 32px;
   width: 64px;
   height: 64px;
   border-radius: 666px;

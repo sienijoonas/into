@@ -1,6 +1,5 @@
 <template>
   <div id="content" class="content">
-    <h1 @click="nextQuestion()">NEXT</h1>
     <Game />
   </div>
 </template>
@@ -19,9 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#game {
-  display: flex;
-  align-content: center;
-  height: 100%;
+.content {
+  padding-top: 64px;
 }
 </style>
