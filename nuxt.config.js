@@ -45,6 +45,7 @@ export default {
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
+  devModules: ['@nuxtjs/eslint-module'],
   /*
    ** Nuxt.js modules
    */
