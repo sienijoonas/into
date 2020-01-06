@@ -40,17 +40,18 @@ export default {
     return {
       hasStarted: false,
       currentQuestion: 0,
-      currentInterval: 0,
+      currentInterval: 1,
       baseNote: 0
     }
   },
   created() {
+    console.log(`currentInterval: ${this.currentInterval}`)
     this.currentInterval = Math.floor(Math.random() * 12) + 1
     this.baseNote = Math.floor(Math.random() * 10) + 2
+    this.nextQuestion()
   },
   methods: {
     startGame() {
-      console.log('penis')
       this.hasStarted = true
     },
     nextQuestion() {

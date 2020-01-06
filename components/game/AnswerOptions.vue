@@ -31,6 +31,7 @@ export default {
     }
   },
   mounted() {
+    console.log(`correctAnswer: ${this.correctAnswer}`)
     this.answerOptions()
   },
   methods: {
