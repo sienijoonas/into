@@ -14,7 +14,13 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css?family=Montserrat:400,900&display=swap'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -23,11 +29,14 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['assets/transitions.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  router: {
+    middleware: 'i18n'
+  },
+  plugins: ['~/plugins/i18n.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -52,10 +61,21 @@ export default {
   /*
    ** Build configuration
    */
+  generate: {
+    routes: ['/', '/game', '/fi', '/fi/game']
+  },
   build: {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) {
+      config.module.rules.push({
+        test: /\.(ogg|mp3|wav|mpe?g)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '[path][name].[ext]'
+        }
+      })
+    }
   }
 }

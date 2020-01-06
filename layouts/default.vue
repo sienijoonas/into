@@ -1,13 +1,31 @@
 <template>
-  <div>
-    <nuxt />
+  <div class="wrapper">
+    <header class="header">
+      <nuxt-link to="/"><Logo /></nuxt-link>
+    </header>
+    <div class="container">
+      <nuxt />
+    </div>
+    <footer class="footer">
+      <p>sienidev</p>
+    </footer>
   </div>
 </template>
 
+<script>
+import Logo from '~/components/Logo'
+
+export default {
+  components: {
+    Logo
+  }
+}
+</script>
+
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  /* font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif; */
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -15,6 +33,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
+  background-color: #1a0930;
+}
+body {
+  height: 100%;
 }
 
 *,
@@ -24,32 +46,33 @@ html {
   margin: 0;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  max-height: 100vh;
+  padding: 128px 0 64px;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.header {
+  position: absolute;
+  top: 0;
+  height: 128px;
+  width: 100%;
+  background-color: #000;
 }
-
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  padding: 0 10px;
+  height: 100%;
 }
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.footer {
+  position: absolute;
+  bottom: 0;
+  height: 64px;
+  width: 100%;
+  background-color: #3d5e99;
 }
 </style>
