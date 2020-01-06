@@ -3,12 +3,7 @@
     <header class="header">
       <nuxt-link to="/"><Logo /></nuxt-link>
     </header>
-    <div class="container">
-      <nuxt />
-    </div>
-    <footer class="footer">
-      <p>sienidev</p>
-    </footer>
+    <nuxt />
   </div>
 </template>
 
@@ -35,7 +30,12 @@ html {
   box-sizing: border-box;
   background-color: #1a0930;
 }
+html,
 body {
+  height: 100%;
+}
+#__nuxt,
+#__layout {
   height: 100%;
 }
 
@@ -44,13 +44,13 @@ body {
 *:after {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 .wrapper {
   position: relative;
-  min-height: 100vh;
-  max-height: 100vh;
-  padding: 128px 0 64px;
+  height: 100%;
+  padding: 128px 0 0;
 }
 .header {
   position: absolute;
@@ -61,18 +61,11 @@ body {
 }
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   align-content: center;
   text-align: center;
   padding: 0 10px;
   height: 100%;
-}
-.footer {
-  position: absolute;
-  bottom: 0;
-  height: 64px;
-  width: 100%;
-  background-color: #3d5e99;
 }
 </style>

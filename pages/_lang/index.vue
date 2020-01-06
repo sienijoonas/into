@@ -1,16 +1,7 @@
 <template>
   <div class="container">
-    <div class="pizza">
-      <div class="links">
-        <nuxt-link to="/game">PELI</nuxt-link>
-
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a href="https://github.com/nuxt/nuxt.js" target="_blank" class="button--grey">
-          GitHub
-        </a>
-      </div>
+    <div class="links">
+      <nuxt-link to="/game">PELI</nuxt-link>
     </div>
   </div>
 </template>
@@ -19,7 +10,7 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss">
 .container {
   margin: 0 auto;
   height: 100%;
@@ -53,5 +44,10 @@ export default {}
 
 .links {
   padding-top: 15px;
+
+  & a {
+    font-size: 64px;
+    color: #fff;
+  }
 }
 </style>

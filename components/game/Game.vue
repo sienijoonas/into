@@ -29,7 +29,6 @@ export default {
   },
   methods: {
     nextQuestion() {
-      console.log(this.currentQuestion)
       this.currentQuestion += 1
       this.currentInterval = Math.floor(Math.random() * 12) + 1
       this.baseNote = Math.floor(Math.random() * 10) + 2
