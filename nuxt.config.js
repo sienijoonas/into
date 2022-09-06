@@ -36,7 +36,8 @@ export default {
   router: {
     middleware: 'i18n'
   },
-  plugins: ['~/plugins/i18n.js'],
+  // plugins: ['~/plugins/i18n.js'],
+  plugins: [{ src: '~plugins/ga.js', mode: 'client' }, { src: '~/plugins/i18n.js' }],
   /*
    ** Nuxt.js dev-modules
    */
